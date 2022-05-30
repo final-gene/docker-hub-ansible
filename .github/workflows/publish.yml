@@ -14,8 +14,13 @@ env:
 
 jobs:
   docker:
+    name: Build and Publish Docker images to Docker Hub
     runs-on: ubuntu-latest
+    
     steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
@@ -34,7 +39,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push
+      - name: Build and publish
+        id: publish
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64,linux/arm64
