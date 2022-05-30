@@ -3,7 +3,7 @@ name: Docker build and publish
 on:
   push:
     branches:
-      - ${{ github.event.repository.default_branch }}
+      - main
     tags:
       - '*'
 
