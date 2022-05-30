@@ -3,7 +3,7 @@ name: Validate Dockerfile
 on:
   push:
     branches:
-      - *
+      - '*'
 
 jobs:
   docker:
