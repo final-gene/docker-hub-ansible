@@ -16,7 +16,7 @@ jobs:
   docker:
     name: Build and Publish Docker images to Docker Hub
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2

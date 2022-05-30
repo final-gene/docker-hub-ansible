@@ -12,9 +12,8 @@ RUN apk add --no-cache \
     git \
     openssh \
     python3 \
-    py3-pip
-
-RUN pip install \
+    py3-pip \
+ && pip install --no-cache-dir \
     asn1crypto \
     certifi \
     cffi \
