@@ -1,7 +1,31 @@
-FROM quay.io/ansible/toolset
+FROM alpine:3.16.0
 
-RUN apt-get update && apt-get install -y \
-   python3-winrm \
-   && rm -rf /var/lib/apt/lists/*
+ENV ANSIBLE_SSH_ARGS='-o ControlMaster=auto -o ControlPersist=600s -o ServerAliveInterval=60 -o TCPKeepAlive=yes' \
+    ANSIBLE_FORCE_COLOR=true \
+    GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
-RUN pip3 install 'pywinrm>=0.3.0'
+RUN apk add --no-cache \
+    ansible \
+    ansible-lint \
+    bash \
+    curl \
+    git \
+    openssh \
+    python3 \
+    py3-pip
+
+RUN pip install \
+    asn1crypto \
+    certifi \
+    cffi \
+    chardet2 \
+    cryptography \
+    idna \
+    ntlm-auth \
+    protobuf \
+    pywinrm\
+    requests \
+    requests_ntlm \
+    six \
+    urllib3 \
+    xmltodict
