@@ -21,6 +21,7 @@ RUN apk add --no-cache \
         chardet \
         cryptography \
         idna \
+        jmespath \
         ntlm-auth \
         protobuf \
         pywinrm\
