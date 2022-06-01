@@ -21,12 +21,15 @@ RUN apk add --no-cache \
         chardet \
         cryptography \
         idna \
+        jsonschema \
         jmespath \
         ntlm-auth \
         protobuf \
-        pywinrm\
+        pytest \
+        pywinrm \
         requests \
         requests_ntlm \
         six \
         urllib3 \
-        xmltodict
+        xmltodict \
+        yamllint
