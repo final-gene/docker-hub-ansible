@@ -33,10 +33,10 @@ jobs:
         with:
           images: ${{ env.DOCKER_IMAGE_NAME }}
           tags: |
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}
+            type=match,pattern=\d+
             type=match,pattern=\d+.\d+
-            type=sha
+            type=match,pattern=\d+.\d+.\d+
+            type=match,pattern=\d+.\d+.\d+-.+
             type=raw,value=latest
 
       - name: Login to DockerHub
