@@ -1,5 +1,7 @@
 # Ansible docker image
 
+[![Docker build and publish](https://github.com/final-gene/docker-hub-ansible/actions/workflows/publish.yml/badge.svg)](https://github.com/final-gene/docker-hub-ansible/actions/workflows/publish.yml)
+
 Docker image based on `alpine` providing `ansible` with additional support for WinRM.
 
 ## How to use this image
