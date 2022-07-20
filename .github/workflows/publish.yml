@@ -35,7 +35,7 @@ jobs:
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}
-            type=match,pattern=\d.\d
+            type=match,pattern=\d+.\d+
             type=sha
             type=raw,value=latest
 
