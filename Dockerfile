@@ -1,4 +1,4 @@
-FROM alpine:3.18.0
+FROM alpine:3.18.2
 
 ENV ANSIBLE_SSH_ARGS='-o ControlMaster=auto -o ControlPersist=600s -o ServerAliveInterval=60 -o TCPKeepAlive=yes' \
     ANSIBLE_FORCE_COLOR=true \
