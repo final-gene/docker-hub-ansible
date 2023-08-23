@@ -13,6 +13,7 @@ RUN apk add --no-cache \
         jq \
         openssh \
         python3 \
+        py3-passlib \
         py3-pip \
     && pip install --no-cache-dir \
         asn1crypto \
@@ -24,6 +25,7 @@ RUN apk add --no-cache \
         jsonschema \
         jmespath \
         ntlm-auth \
+        passlib \
         protobuf \
         pytest \
         pywinrm \
