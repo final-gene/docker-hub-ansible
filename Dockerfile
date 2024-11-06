@@ -1,4 +1,4 @@
-FROM alpine:3.18.4
+FROM alpine:3.20.3
 
 ENV ANSIBLE_SSH_ARGS='-o ControlMaster=auto -o ControlPersist=600s -o ServerAliveInterval=60 -o TCPKeepAlive=yes' \
     ANSIBLE_FORCE_COLOR=true \
@@ -15,24 +15,23 @@ RUN apk add --no-cache \
         python3 \
         py3-passlib \
         py3-pip \
-    && pip install --no-cache-dir \
-        asn1crypto \
-        certifi \
-        cffi \
-        chardet \
-        cryptography \
-        idna \
-        jsonschema \
-        jmespath \
+        py3-asn1crypto \
+        py3-certifi \
+        py3-cffi \
+        py3-chardet \
+        py3-cryptography \
+        py3-idna \
+        py3-jsonschema \
+        py3-jmespath \
+        py3-protobuf \
+        py3-pytest \
+        py3-requests \
+        py3-six \
+        py3-urllib3 \
+        py3-xmltodict \
+    && pip install --no-cache-dir --break-system-packages \
         ntlm-auth \
-        passlib \
-        protobuf \
         proxmoxer \
-        pytest \
         pywinrm \
-        requests \
         requests_ntlm \
-        six \
-        urllib3 \
-        xmltodict \
         yamllint
