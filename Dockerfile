@@ -27,6 +27,7 @@ RUN apk add --no-cache \
         ntlm-auth \
         passlib \
         protobuf \
+        proxmoxer \
         pytest \
         pywinrm \
         requests \
