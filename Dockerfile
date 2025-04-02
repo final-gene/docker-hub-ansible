@@ -29,6 +29,8 @@ RUN apk add --no-cache \
         py3-six \
         py3-urllib3 \
         py3-xmltodict \
+        tar \
+        unzip \
     && pip install --no-cache-dir --break-system-packages \
         ntlm-auth \
         proxmoxer \
