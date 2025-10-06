@@ -23,6 +23,7 @@ RUN apk add --no-cache \
         py3-idna \
         py3-jsonschema \
         py3-jmespath \
+        py3-netaddr \
         py3-protobuf \
         py3-pytest \
         py3-requests \
